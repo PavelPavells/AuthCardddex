@@ -10,7 +10,7 @@ class Dashboard extends Component {
     name: "",
     members: [],
     id: "",
-    owner: {}
+    owner: {} 
   };
   toggleModal = e => {
     this.setState({ modal: !this.state.modal, edit: false });
@@ -79,9 +79,9 @@ class Dashboard extends Component {
         <>
           <div className="projects">
             <div className="no-projects">
-              <h1 className="header">You have no Tasks</h1>
+              <h1 className="header">Нет новых задач</h1>
               <button className="main-btn" onClick={this.toggleModal}>
-                Create Your First Task
+                Создать задачу
               </button>
               <div className="modal-wrapper">
                 <Modal onClose={this.toggleModal} modal={this.state.modal} />
@@ -93,7 +93,7 @@ class Dashboard extends Component {
     }
     return (
       <div className="main-content">
-        <h1 className="header">Your Tasks</h1>
+        <h1 className="header">Ваши задачи</h1>
         {content}
       </div>
     );

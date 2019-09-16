@@ -51,14 +51,14 @@ class TopNav extends Component {
           </i>
           <Link to="/dashboard">
             <h1 className="brand-header">
-              LOGO {/*<span className="brand-header-sub">s</span>*/}
+              ЛОГО
             </h1>
           </Link>
         </div>
         <ul className="right-top">
           <li>
             <div className="email">
-              <p>Signed in as {email}</p>
+              <p>Вы вошли как {email}</p>
             </div>
           </li>
           <li>
@@ -67,16 +67,16 @@ class TopNav extends Component {
             </div>
             {this.state.dropdown ? (
               <ul className="dropdown">
-                <p>Hello, {name !== undefined && name.split(" ")[0]}</p>
+                <p>Здравствуйте, {name !== undefined && name.split(" ").slice(1, 3).join(" ")}</p>
                 <Link to="/dashboard">
-                  <li>Home</li>
+                  <li>Главная</li>
                 </Link>
                 {/*
                 <Link to="/tasks">
                   <li>My Tasks</li>
                 </Link>
                 */}
-                <li onClick={this.onLogoutClick}>Sign Out</li>
+                <li onClick={this.onLogoutClick}>Выйти</li>
               </ul>
             ) : null}
           </li>
