@@ -10,7 +10,7 @@
   visibility: visible;
   position: fixed;
   top: 8%;
-  height: 550px;
+  height: 600px;
   z-index: 1000;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
@@ -28,7 +28,7 @@
 
 .close-modal {
   color: $black;
-  font-size: 18px;
+  font-size: 20px;
   display: inline-block;
 
   &:hover {

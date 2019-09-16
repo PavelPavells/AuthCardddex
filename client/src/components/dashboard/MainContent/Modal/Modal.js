@@ -227,10 +227,10 @@ class Modal extends Component {
           <span className="close-modal" onClick={this.onClose}>
             &times;
           </span>
-          <h1 className="header">Create Task</h1>
+          <h1 className="header">Создать задачу</h1>
           <div className="form-group">
             <label>
-              <div className="form-label">Task Name(required)</div>
+              <div className="form-label">Имя задачи</div>
               <input
                 required
                 onChange={this.onChange}
@@ -368,7 +368,7 @@ class Modal extends Component {
           <div className="form-group">
             <div className="split">
               <label>
-                <div className="form-label">Assignee</div>
+                <div className="form-label">Назначен</div>
                 <select
                   onChange={this.onSelectChange}
                   value={this.state.assignee}
@@ -378,18 +378,18 @@ class Modal extends Component {
                 >
                   {!assignee && (
                     <option disabled value="">
-                      Assign to
+                      Назначить на
                     </option>
                   )}
                   {assignee && <option value={assignee}>{assigneeName}</option>}
                   {assigneeName !== name + " (You)" && (
-                    <option value={email}>{name + " (You)"}</option>
+                    <option value={email}>{name + " (Ты)"}</option>
                   )}
                   {membersOptions}
                 </select>
               </label>
               <label>
-                <div className="form-label">Due Date</div>
+                <div className="form-label">Срок задачи</div>
                 <div className="split">
                   <select
                     required={this.state.dayDue ? true : false}
@@ -403,7 +403,7 @@ class Modal extends Component {
                   >
                     {!dateDue && (
                       <option disabled value="">
-                        Month
+                        Месяц
                       </option>
                     )}
                     {monthsOptions}
@@ -420,7 +420,7 @@ class Modal extends Component {
                   >
                     {!dateDue && (
                       <option disabled value="">
-                        Day
+                        День
                       </option>
                     )}
                     {daysOptions}
@@ -435,13 +435,13 @@ class Modal extends Component {
               type="button"
               onClick={this.updateTask.bind(this, taskId)}
             >
-              Update Task
+              Изменить задачу
             </button>
             <button
               className="main-btn delete-project"
               onClick={this.deleteTask.bind(this, taskId)}
             >
-              Delete Task
+              Удалить задачу
             </button>
           </div>
         </form>
@@ -454,13 +454,13 @@ class Modal extends Component {
           <span className="close-modal" onClick={this.onClose}>
             &times;
           </span>
-          <h1 className="header">Edit Task Info</h1>
+          <h1 className="header">Изменить информацию о задаче</h1>
           <p className="created-by">
-            Created by {this.props.owner.name} ({this.props.owner.email})
+            Создано: {this.props.owner.name} ({this.props.owner.email})
           </p>
           <div className="form-group">
             <label>
-              <div className="form-label">Task Name(required)</div>
+              <div className="form-label">имя задачи(Обязательно)</div>
               <input
                 onChange={this.onChange}
                 value={this.state.projectName}
@@ -471,9 +471,9 @@ class Modal extends Component {
               />
             </label>
           </div>
-          <div className="form-label">Add team members (optional)</div>
+          <div className="form-label">Добавить члена команды (не обязательно)</div>
           <button className="main-btn add-members" onClick={this.addMember}>
-            Add another member
+            Добавить другого сотрудника
           </button>
           <div className="members-edit">
             {members.map((val, id) => {
@@ -482,7 +482,7 @@ class Modal extends Component {
               return (
                 <div className="split" key={id}>
                   <label className="form-label" htmlFor={memberId}>
-                    Name(required for teams)
+                    Имя(Обязательно для команды)
                     <input
                       type="text"
                       name="name"
@@ -494,7 +494,7 @@ class Modal extends Component {
                     />
                   </label>
                   <label className="form-label split-email" htmlFor={emailId}>
-                    Email(required for teams)
+                    Email(Обязательно для команды)
                     <input
                       type="text"
                       name="email"
@@ -509,7 +509,7 @@ class Modal extends Component {
                     className="delete"
                     onClick={this.deleteMember.bind(this, id)}
                   >
-                    REMOVE
+                    УДАЛИТЬ
                   </span>
                 </div>
               );
@@ -520,14 +520,14 @@ class Modal extends Component {
               className="main-btn update-project"
               onClick={this.updateProject.bind(this, this.props.id)}
             >
-              Update Task
+              Изменить задачу
             </button>
             {this.props.owner.id === this.props.auth.user.id ? (
               <button
                 className="main-btn delete-project"
                 onClick={this.deleteProject.bind(this, this.props.id)}
               >
-                Delete Task
+                Удалить задачу
               </button>
             ) : null}
           </div>
@@ -541,23 +541,23 @@ class Modal extends Component {
           <span className="close-modal" onClick={this.onClose}>
             &times;
           </span>
-          <h1 className="header">Create a Task</h1>
+          <h1 className="header">Создать задачу</h1>
           <div className="form-group">
             <label>
-              <div className="form-label">Project Name(required)</div>
+              <div className="form-label">Имя задачи</div>
               <input
                 onChange={this.onChange}
                 value={this.state.projectName}
                 id="projectName"
                 type="text"
-                placeholder="My Awesome Project"
+                placeholder="Мой проект"
                 className="form-input"
               />
             </label>
           </div>
-          <div className="form-label">Add team members(optional)</div>
+          <div className="form-label">Добавить члена команды</div>
           <button className="main-btn add-members" onClick={this.addMember}>
-            Add another member
+            Добавить человека
           </button>
           <div className="members">
             {members.map((val, id) => {
@@ -566,7 +566,7 @@ class Modal extends Component {
               return (
                 <div className="split" key={id}>
                   <label className="form-label" htmlFor={memberId}>
-                    Name(required for teams)
+                    Имя (Обязательно для команды)
                     <input
                       type="text"
                       name="name"
@@ -578,7 +578,7 @@ class Modal extends Component {
                     />
                   </label>
                   <label className="form-label split-email" htmlFor={emailId}>
-                    Email(required for teams)
+                    Email(Обязательно для команды)
                     <input
                       type="text"
                       name="email"
@@ -593,7 +593,7 @@ class Modal extends Component {
                     className="delete"
                     onClick={this.deleteMember.bind(this, id)}
                   >
-                    REMOVE
+                    УДАЛИТЬ
                   </span>
                 </div>
               );
@@ -604,7 +604,7 @@ class Modal extends Component {
               className="main-btn create-project"
               onClick={this.createProject}
             >
-              Create Task
+              Создать задачу
             </button>
           </div>
         </div>

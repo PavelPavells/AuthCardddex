@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
+import $ from "jquery";
 import "./Auth.scss";
 class Login extends Component {
   constructor() {
@@ -11,13 +12,18 @@ class Login extends Component {
       email: "",
       password: "",
       errors: {}
-    }; 
+    };
   }
   componentDidMount() {
     // If logged in and user navigates to Login page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
       this.props.history.push("/dashboard");
     }
+    $(".link-login").on("click", function(e) {
+      e.preventDefault();
+      $("link-login").removeClass("active");
+      $(this).addClass("active");
+    });
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
@@ -56,12 +62,12 @@ class Login extends Component {
           <form className="auth-form" noValidate onSubmit={this.onSubmit}>
             <div className="auth-group">
               <div className="bottom-group">
-                <Link to="/register" className="link">
+                <Link to="/" className="link-login">
+                  Вход
+                </Link>
+                <Link to="/register" className="link-register">
                   Регистрация
                 </Link>
-                {/*<Link to="/" className="link">
-                  Вход
-                </Link>*/}
               </div>
               <label>
                 <div className="auth-label">Email</div>
@@ -73,7 +79,7 @@ class Login extends Component {
                   type="email"
                   className="auth-input"
                 />
-                <div className="auth-error"> 
+                <div className="auth-error">
                   {errors.email}
                   {errors.emailnotfound}
                 </div>
@@ -106,7 +112,10 @@ class Login extends Component {
             <h1>Lorem ipsum dolor sit amet</h1>
             <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
             <p>
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
             </p>
           </div>
         </div>

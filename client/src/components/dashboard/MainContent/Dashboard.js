@@ -57,7 +57,7 @@ class Dashboard extends Component {
       content = (
         <>
           <button className="main-btn" onClick={this.toggleModal}>
-            Create Another Task
+            Создать задачу
           </button>
           <div className="modal-wrapper">
             <Modal
