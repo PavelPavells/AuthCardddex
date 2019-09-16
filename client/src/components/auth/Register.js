@@ -56,9 +56,9 @@ class Register extends Component {
             <Link to="/" className="link">
               Вход
             </Link>
-            <Link to="/" className="link">
+            {/*<Link to="/" className="link">
               Регистрация
-            </Link>
+              </Link>*/}
             <div className="auth-group">
               <div className="bottom-group">
                 <label>

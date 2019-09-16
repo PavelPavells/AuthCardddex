@@ -59,9 +59,9 @@ class Login extends Component {
                 <Link to="/register" className="link">
                   Регистрация
                 </Link>
-                <Link to="/" className="link">
+                {/*<Link to="/" className="link">
                   Вход
-                </Link>
+                </Link>*/}
               </div>
               <label>
                 <div className="auth-label">Email</div>

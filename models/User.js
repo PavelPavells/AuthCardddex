@@ -13,7 +13,7 @@ const UserSchema = new Schema({
   companyName: {
     type: String,
     required: true
-  },
+  }, 
   companyINN: {
     type: String,
     required: true
