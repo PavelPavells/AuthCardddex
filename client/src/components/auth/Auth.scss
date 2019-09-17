@@ -4,19 +4,26 @@
   flex-direction: column;
   height: 100%
 }
-.header {
+.header-logo {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: 5px;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 2px solid $primaryBlue;
+  height: 7vh;
+  margin: 0 8em;
+}
+.header-logo img {
+  width: 243px;
+  height: 35px;
+  padding: 18px 0;
+  background: url(../../img/carddex_logo.png) no-repeat;
 }
 .base-wrapper {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  height: 88vh;
+  height: 49em;
   width: 100%;
   background: $white;
   //margin: 2em 0;
@@ -119,14 +126,50 @@
 .footer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  border-top: 1px solid lightgrey;
-  font-size: 14px;
-  height: 7vh;
+  font-family: Montserrat;
+ // border-top: 1px solid lightgrey;
+  background-color: #28343F;;
+  height: 12vh;
 }
-.footer a {
-  margin-left: 3em;
+.footer-copy h1 {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 100;
+}
+.footer-copy p {
+  font-size: 12px;
+  color: #8B9298;
+}
+.footer-phone {
+  display: flex;
+  flex-direction: column;
+}
+.footer-phone h1 {
+  font-size: 15px;
+  font-weight: 100;
+  color: #ffffff;
+}
+.footer-phone img {
+  background: url(../../img/call.png) no-repeat;
+  width: 29.97px;
+  height: 31px;
+}
+.footer-email {
+  display: flex;
+  flex-direction: row;
+  //width: 150px;
+  background: url(../../img/email.png) no-repeat;
+}
+.footer-email img {
+  width: 30.94px;
+  height: 32px;
+}
+.footer-email h1 {
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 100;
 }
 .link-login {
   //background-color: $lighterGray;

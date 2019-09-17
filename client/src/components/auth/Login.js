@@ -56,7 +56,9 @@ class Login extends Component {
     const { errors } = this.state;
     return (
       <div className="wrapper">
-        <div className="header">ЛОГО</div>
+        <div className="header-logo">
+          <img src="../../img/carddex_logo.png" alt=""/>
+        </div>
         <div className="base-wrapper">
           {/*<div className="auth-header">Sign In</div>*/}
           <form className="auth-form" noValidate onSubmit={this.onSubmit}>
@@ -120,9 +122,20 @@ class Login extends Component {
           </div>
         </div>
         <div className="footer">
-          <a href="https://yandex.ru">О Нас</a>
-          <a href="https://yandex.ru">Связаться с нами</a>
-          <a href="https://yandex.ru">Помощь</a>
+          <div className="footer-copy">
+            <h1>Copyright 2019 &copy; CARDDEX</h1>
+            <p>Информация на сайте не является публичной офертой</p>
+          </div>
+          <div className="footer-phone">
+            <img src="../../img/call.png" alt="" />
+            <h1>8 (800) 333-93-36</h1>
+            <h1>8 (499) 64-333-69</h1>
+          </div>
+          <div className="footer-email">
+            <img src="../../img/email.png" alt="" />
+            <h1>help@carddex.ru</h1>
+          </div>
+          <div className="footer-email"></div>
         </div>
       </div>
     );
