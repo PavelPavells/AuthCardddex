@@ -128,14 +128,16 @@ class Login extends Component {
           </div>
           <div className="footer-phone">
             <img src="../../img/call.png" alt="" />
-            <h1>8 (800) 333-93-36</h1>
-            <h1>8 (499) 64-333-69</h1>
+            <div className="footer-phone__number">
+              <h1>8 (800) 333-93-36</h1>
+              <h1>8 (499) 64-333-69</h1>
+            </div>
           </div>
           <div className="footer-email">
             <img src="../../img/email.png" alt="" />
             <h1>help@carddex.ru</h1>
           </div>
-          <div className="footer-email"></div>
+          
         </div>
       </div>
     );

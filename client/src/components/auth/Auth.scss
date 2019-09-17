@@ -129,9 +129,14 @@
   justify-content: space-around;
   align-items: center;
   font-family: Montserrat;
- // border-top: 1px solid lightgrey;
+  padding: 0 15em;
   background-color: #28343F;;
   height: 12vh;
+}
+.footer-copy {
+  display: flex;
+  flex-direction: column;
+  margin: 3px 0;
 }
 .footer-copy h1 {
   font-size: 14px;
@@ -144,25 +149,37 @@
 }
 .footer-phone {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 11em;
 }
 .footer-phone h1 {
   font-size: 15px;
   font-weight: 100;
   color: #ffffff;
+  margin: 0;
+  padding: 3px 0;
 }
 .footer-phone img {
   background: url(../../img/call.png) no-repeat;
   width: 29.97px;
   height: 31px;
 }
+.footer-phone__number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .footer-email {
   display: flex;
   flex-direction: row;
-  //width: 150px;
+  justify-content: space-around;
+  width: 180px;
   background: url(../../img/email.png) no-repeat;
 }
 .footer-email img {
+  display: block;
   width: 30.94px;
   height: 32px;
 }
