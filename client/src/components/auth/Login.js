@@ -72,12 +72,20 @@ class Login extends Component {
           <form className="auth-form" noValidate onSubmit={this.onSubmit}>
             <div className="auth-group">
               <div className="bottom-group">
-                <Link to="/" className="link-login">
+
+              {/**CHANGE HERE */}
+              <div className="link-login">
+                <Link to="/">
                   Вход
                 </Link>
-                <Link to="/register" className="link-register">
+              </div>
+              <div className="link-register">
+                <Link to="/register">
                   Регистрация
                 </Link>
+              </div>
+              {/**CHANGE HERE */}
+
               </div>
               <label>
                 <div className="auth-label">Email</div>

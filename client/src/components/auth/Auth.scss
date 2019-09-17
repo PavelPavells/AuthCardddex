@@ -60,9 +60,9 @@
 .wrapper-separator {
   display: block;
   position: absolute;
-  top: 450px;
-  width: 680px;
-  height: 2px;
+  top: 470px;
+  width: 730px;
+  height: 1px;
   background-color: #828282;
   transform: rotate(90deg);
 }
@@ -72,6 +72,7 @@
   border: 1px solid $gray;
   padding: 2rem;
   margin-top: 25em;
+  margin-right: 40em;
   font-size: 5px;
 }
 .auth-label {
