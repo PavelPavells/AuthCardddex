@@ -163,18 +163,14 @@ body {
   margin-top: 1rem;
   color: #ffffff;
   background-color: $primaryBlue;
-  border-color: $primaryBlue;
   border-radius: 10px;
+  border-color: transparent;
   width: 100%;
   font-size: 16px;
   font-family: $code;
-  transition: all 0.25s ease 0s;
+  outline: transparent;
   &:hover {
-    background-color: $hoverBlue;
-    border-color: $hoverBlue;
-    transform: translateY(-2.5px);
     cursor: pointer;
-    transition: all 0.25s ease 0s;
   }
 }
 .footer {
