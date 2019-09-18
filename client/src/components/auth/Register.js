@@ -161,7 +161,7 @@ class Register extends Component {
                 <div>
                   <div className="auth-password__ask">
                     <label>
-                      <input type="checkbox" checked/> Запомнить меня
+                      <input type="checkbox" checked /> Запомнить меня
                     </label>
                     <a
                       href="https://yandex.ru"
