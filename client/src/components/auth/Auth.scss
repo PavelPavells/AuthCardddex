@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 49em;
   width: 100%;
   background: $white;
@@ -32,7 +32,7 @@
   flex-direction: column;
   width: 40em;
   align-self: flex-start;
-  margin-top: 6vh;
+  margin-top: 2vh;
   margin-left: 2em;
 }
 .main-paragraph > * {
@@ -66,13 +66,20 @@
   background-color: #828282;
   transform: rotate(90deg);
 }
+.wrapper-auth {
+  display: flex;
+  flex-direction: column;
+  //justify-content: flex-start;
+  //margin-bottom: 60px;
+  margin: -35px;
+}
+.wrapper-auth__header {
+  height: 3vh;
+  margin: 5.2em 25em 0 0;
+}
 .auth-form {
-  width: 80em;
+  width: 65em;
   background-color: $white;
-  border: 1px solid $gray;
-  padding: 2rem;
-  margin-top: 25em;
-  margin-right: 40em;
   font-size: 5px;
 }
 .auth-label {
@@ -86,7 +93,7 @@
 .auth-input {
   background-color: $lighterGray;
   border: 1px solid lightgrey;
-  border-radius: 2px;
+  border-radius: 10px;
   height: 2em;
   width: 100%;
   outline: 0;
@@ -107,13 +114,38 @@
   font-family: $code;
   font-size: 10px;
 }
+.auth-password__ask {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.auth-password__ask label {
+  padding: 5px 0;
+  font-size: 14px;
+  font-weight: 100;
+}
+.auth-group__ask-password {
+  font-size: 15px;
+  font-weight: 300;
+  padding: 5px 0;
+}
+.auth-condition {
+  padding: 10px 0;
+  font-size: 12px;
+  font-weight: 100;
+}
+.auth-conditon__confidiency {
+  display: block;
+  font-size: 11px;
+  font-weight: normal;
+}
 .auth-button {
   height: 40px;
   margin-top: 1rem;
   color: #ffffff;
   background-color: $primaryBlue;
   border-color: $primaryBlue;
-  border-radius: 4px;
+  border-radius: 10px;
   width: 100%;
   font-size: 16px;
   font-family: $code;

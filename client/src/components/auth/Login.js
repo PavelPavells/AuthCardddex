@@ -51,67 +51,90 @@ class Login extends Component {
     return (
       <div className="wrapper">
         <div className="header-logo">
-          <img src="../../img/carddex_logo.png" alt=""/>
+          <img src="../../img/carddex_logo.png" alt="" />
         </div>
         <div className="base-wrapper">
           <div className="main-paragraph">
             <h1>Личный кабинет Карддекс</h1>
             <h3>Личный кабинет партнеров и дилеров Карддекс</h3>
             <p>
-              Войдите или зарегистрируйтесь для получения всей доступной информации
-              по продуктам Карддекс, вашим заказам, скидкам и предложениям.
+              Войдите или зарегистрируйтесь для получения всей доступной
+              информации по продуктам Карддекс, вашим заказам, скидкам и
+              предложениям.
             </p>
           </div>
           <div className="wrapper-separator"></div>
-          <form className="auth-form" noValidate onSubmit={this.onSubmit}>
-            <div className="auth-group">
-              <div className="bottom-group">
-                <Link to="/" className="link-login active">
-                  Вход
-                </Link>
-                <Link to="/register" className="link-register">
-                  Регистрация
-                </Link>
+          <div className="wrapper-auth">
+            <div className="wrapper-auth__header">
+              <Link to="/" className="link-login active">
+                Вход
+              </Link>
+              <Link to="/register" className="link-register">
+                Регистрация
+              </Link>
+            </div>
+            <form className="auth-form" noValidate onSubmit={this.onSubmit}>
+              <div className="auth-group">
+                <label>
+                  <div className="auth-label">Email</div>
+                  <input
+                    onChange={this.onChange}
+                    value={this.state.email}
+                    error={errors.email}
+                    id="email"
+                    type="email"
+                    className="auth-input"
+                  />
+                  <div className="auth-error">
+                    {errors.email}
+                    {errors.emailnotfound}
+                  </div>
+                </label>
               </div>
-              <label>
-                <div className="auth-label">Email</div>
-                <input
-                  onChange={this.onChange}
-                  value={this.state.email}
-                  error={errors.email}
-                  id="email"
-                  type="email"
-                  className="auth-input"
-                />
-                <div className="auth-error">
-                  {errors.email}
-                  {errors.emailnotfound}
-                </div>
-              </label>
-            </div>
-            <div className="auth-group">
-              <label>
-                <div className="auth-label">Пароль</div>
-                <input
-                  onChange={this.onChange}
-                  value={this.state.password}
-                  error={errors.password}
-                  id="password"
-                  type="password"
-                  className="auth-input"
-                />
-                <div className="auth-error">
-                  {errors.password}
-                  {errors.passwordincorrect}
-                </div>
-              </label>
-            </div>
-            <div>
-              <button type="submit" className="auth-button">
-                Войти
-              </button>
-            </div>
-          </form>
+              <div className="auth-group">
+                <label>
+                  <div className="auth-label">Пароль</div>
+                  <input
+                    onChange={this.onChange}
+                    value={this.state.password}
+                    error={errors.password}
+                    id="password"
+                    type="password"
+                    className="auth-input"
+                  />
+                  <div className="auth-error">
+                    {errors.password}
+                    {errors.passwordincorrect}
+                  </div>
+                </label>
+              </div>
+              <div className="auth-password__ask">
+                <label>
+                  <input type="checkbox" checked/> Запомнить меня
+                </label>
+                <a
+                  href="https://yandex.ru"
+                  className="auth-group__ask-password"
+                >
+                  Забыли пароль?
+                </a>
+              </div>
+              <div className="auth-condition">
+                <span>Нажимая кнопку "Войти", вы принимаете</span>
+                <a
+                  href="https://yandex.ru"
+                  className="auth-conditon__confidiency"
+                >
+                  Условия "Политики Конфиденциальности"
+                </a>
+              </div>
+              <div>
+                <button type="submit" className="auth-button">
+                  Войти
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
         <div className="footer">
           <div className="footer-copy">
