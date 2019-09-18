@@ -3,7 +3,6 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
-import $ from "jquery";
 import "./Auth.scss";
 class Register extends Component {
   constructor() {
@@ -23,11 +22,6 @@ class Register extends Component {
     if (this.props.auth.isAuthenticated) {
       this.props.history.push("/dashboard");
     }
-    $(".link-register").on("click", function(e) {
-      e.preventDefault();
-      //$(".link-register").removeClass("active");
-      $(this).addClass("active");
-    });
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
@@ -69,10 +63,10 @@ class Register extends Component {
       </div>
         <div className="wrapper-separator"></div>
           <form className="auth-form" noValidate onSubmit={this.onSubmit}>
-            <Link to="/" className="link-login" checked>
+            <Link to="/" className="link-login">
               Вход
             </Link>
-            <Link to="/register" className="link-register">
+            <Link to="/register" className="link-register active">
               Регистрация
             </Link>
             <div className="auth-group">
