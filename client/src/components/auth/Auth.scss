@@ -1,17 +1,5 @@
 @import "../../styles/base.scss";
-html {
-	min-height: 100%;
-	display: -webkit-flex;
-	display: flex;
-	flex-direction: column;
-}
-body {
-	margin: 0;
-	display: -webkit-flex;
-	display: flex;
-	flex-direction: column;
-	flex: auto;
-}
+
 .wrapper {
   display: flex;
   display: -webkit-flex;
@@ -363,5 +351,9 @@ body {
 @media (max-width: 1920px) and (max-height: 1080px) {
   .footer {
     padding: 0 14em 0 10em;
+  }
+  .auth-password__ask label {
+    padding: 4px 0;
+    font-size: 15px;
   }
 }
