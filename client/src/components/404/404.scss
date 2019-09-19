@@ -30,7 +30,7 @@
     transition: all 0.25s ease 0s;
     &:hover {
       opacity: 0.9;
-      transition: all 0.25s ease 0s;
+      transition: all 0.25s ease 0s; 
       box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
     }
     @keyframes float {

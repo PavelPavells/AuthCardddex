@@ -5,6 +5,7 @@
   display: -webkit-flex;
   flex-direction: column;
   min-height: 100%;
+  font-family: $code;
 }
 .header-logo {
   display: flex;
@@ -41,6 +42,7 @@
   align-self: flex-start;
   margin-top: 2vh;
   margin-left: 2em;
+  font-family: $code;
 }
 .main-paragraph > * {
   margin: 0.5em 0 0 3.5em;
@@ -128,11 +130,10 @@
 }
 .auth-password__ask label {
   padding: 5px 0;
-  font-size: 14px;
   font-weight: 100;
 }
 .auth-group__ask-password {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 300;
   padding: 5px 0;
 }
@@ -168,7 +169,7 @@
   flex: auto;
   justify-content: space-around;
   align-items: center;
-  font-family: Montserrat;
+  font-family: $code;
   padding-left: 20em;
   padding-right: 25em;
   background-color: #28343F;;

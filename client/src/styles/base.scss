@@ -5,9 +5,9 @@ $lighterGray: #fafafa;
 $lightGray: #fefefe;
 $gray: #e0e0e0;
 $darkGray: #616161;
-$primaryBlue: #EB5757;
+$primaryBlue: #eb5757;
 $hoverBlue: #d3354f;
-$red: #DC2222;
+$red: #dc2222;
 $mainDark: #191f2b;
 $lightDark: #222a37;
 // font weights
@@ -18,4 +18,11 @@ $semibold: 600;
 $bold: 700;
 $heavy: 800;
 // fonts
-$code: 'Montserrat', sans-serif;
+$code: "Montserrat";
+@font-face {
+	font-family: "GothamPro";
+    src: url("/GothamPro.ttf")format("truetype");
+    src: local("GothamPro");
+    font-weight: normal;
+    font-style: normal;
+}
